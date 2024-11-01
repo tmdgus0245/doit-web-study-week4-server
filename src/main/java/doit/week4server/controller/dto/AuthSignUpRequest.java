@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 public class AuthSignUpRequest {
-    private String userName;
-    private LocalDate userBirthday;
-    private String userNickname;
-    private String userLoginId;
-    private String userPassword;
+    private String studentName;
+    private String studentNickname;
+    private LocalDate studentBirthday;
+    private String studentLoginId;
+    private String studentPassword;
 }

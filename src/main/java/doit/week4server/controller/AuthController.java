@@ -17,32 +17,20 @@ public class AuthController {
 
     private final AuthService authService;
 
-    /* 아래의 코드는 @RequiredArgsConstructor 어노테이션을 사용하면 자동으로 생성되므로 필요 없어짐
-    public MemberController(MemberService memberService) {
-        this.memberService = memberService;
-    }
-    */
-
-    /**
-     * 아이디 중복 체크를 진행한다.
-     */
-    @GetMapping("/auth/members/validate")
-    public void validateLoginId(@RequestParam String userLoginId) {
-        authService.validateLoginId(userLoginId);
+    // 아이디 중복 체크
+    @GetMapping("/auth/students/validate")
+    public void validateLoginId(@RequestParam String studentLoginId) {
+        authService.validateLoginId(studentLoginId);
     }
 
-    /**
-     * 회원가입을 진행한다.
-     */
-    @PostMapping("/auth/members")
+    // 회원가입
+    @PostMapping("/auth/students")
     public AuthLoginResponse signUp(@RequestBody AuthSignUpRequest request) {
         return authService.signUp(request);
     }
 
-    /**
-     * 로그인을 진행한다.
-     */
-    @PostMapping("/auth/members/login")
+    // 로그인
+    @PostMapping("/auth/students/login")
     public AuthLoginResponse login(@RequestBody AuthLoginRequest request) {
         return authService.login(request);
     }

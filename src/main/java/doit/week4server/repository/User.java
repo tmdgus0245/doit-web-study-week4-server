@@ -23,7 +23,7 @@ public class User {
     private String userPassword;
 
     @Builder
-    private User(String userName, LocalDate userBirthday, String userLoginId, String userPassword) {
+    private User(String userName, String userNickname, LocalDate userBirthday, String userLoginId, String userPassword) {
         this.userName = userName;
         this.userNickname = userNickname;
         this.userBirthday = userBirthday;

@@ -7,6 +7,7 @@ import lombok.Data;
 public class AuthSignUpRequest {
     private String userName;
     private LocalDate userBirthday;
+    private String userNickname;
     private String userLoginId;
     private String userPassword;
 }
